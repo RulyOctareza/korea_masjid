@@ -1,6 +1,6 @@
 # korea_masjid
 
-A new Flutter project.
+Aplikasi untuk menemukan Masjid Indonesia di Korea selatan.
 
 ## Getting Started
 

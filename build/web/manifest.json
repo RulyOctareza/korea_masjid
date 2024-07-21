@@ -1,11 +1,11 @@
 {
-    "name": "korea_masjid",
-    "short_name": "korea_masjid",
+    "name": "Masjid Korea",
+    "short_name": "Masjid Korea",
     "start_url": ".",
     "display": "standalone",
     "background_color": "#0175C2",
     "theme_color": "#0175C2",
-    "description": "A new Flutter project.",
+    "description": "The App to Find Masjid in South Korea",
     "orientation": "portrait-primary",
     "prefer_related_applications": false,
     "icons": [
