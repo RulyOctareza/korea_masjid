@@ -21,7 +21,7 @@ class SplashPage extends StatelessWidget {
                   width: MediaQuery.of(context).size.width,
                   height: MediaQuery.of(context).size.height,
                   child: Image.asset(
-                    'assets/korea1.jpg',
+                    'assets/korea2.jpg',
                     fit: BoxFit.fill,
                   ),
                 ),
@@ -34,11 +34,12 @@ class SplashPage extends StatelessWidget {
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       Container(
-                        height: 75,
-                        width: 75,
+                        height: 60,
+                        width: 60,
                         decoration: const BoxDecoration(
+                          shape: BoxShape.circle,
                           image: DecorationImage(
-                            image: AssetImage('assets/logo.png'),
+                            image: AssetImage('assets/logokmi.png'),
                           ),
                         ),
                       ),

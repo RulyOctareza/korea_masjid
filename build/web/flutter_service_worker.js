@@ -3,9 +3,9 @@ const MANIFEST = 'flutter-app-manifest';
 const TEMP = 'flutter-temp-cache';
 const CACHE_NAME = 'flutter-app-cache';
 
-const RESOURCES = {"assets/AssetManifest.bin": "b1799526a0ed06ffc1ba78f565d0b2d4",
-"assets/AssetManifest.bin.json": "e85fc0b7256de71e288bb2313e37c5fb",
-"assets/AssetManifest.json": "90f4776eaa059833c6ecc33189e7bc2c",
+const RESOURCES = {"assets/AssetManifest.bin": "a868b0743d14d19ff7c37e8394b5996f",
+"assets/AssetManifest.bin.json": "138315bb7234166fbf1342a90baa66b1",
+"assets/AssetManifest.json": "50ef44979917c89ec38cc09f82adf82a",
 "assets/assets/alishlah1.jpeg": "d4d7a6825091c006b751d4f8d9fc048a",
 "assets/assets/ansan.jpg": "3dca7dda1475b83dd997518df5acca43",
 "assets/assets/btn_back.png": "5621ccb1da8c6891c4989641df8376b1",
@@ -25,7 +25,9 @@ const RESOURCES = {"assets/AssetManifest.bin": "b1799526a0ed06ffc1ba78f565d0b2d4
 "assets/assets/itaewon.jpg": "d508e7296ecd2e48445cf7cc146fcf1e",
 "assets/assets/KMJJ.jpg": "57b1609a9c499768f2b1365956944ded",
 "assets/assets/korea1.jpg": "245e54cb436559d89a448b5faaaf77f9",
+"assets/assets/korea2.jpg": "7af838f9c5eb690c37d7404b518d7189",
 "assets/assets/logo.png": "ae8cc07ba77493aaedfce40740a276a3",
+"assets/assets/logokmi.png": "de4b36157c5b62dcbb40889589a9d0a4",
 "assets/assets/MITRAPUMITA.jpg": "dda006a1e52a61d7388b0b7aba66ec3a",
 "assets/FontManifest.json": "dc3d03800ccca4601324923c0b1d6d57",
 "assets/fonts/MaterialIcons-Regular.otf": "8129e426d4520c139cb65636d84f4140",
@@ -42,17 +44,14 @@ const RESOURCES = {"assets/AssetManifest.bin": "b1799526a0ed06ffc1ba78f565d0b2d4
 "canvaskit/skwasm.js.symbols": "c3c05bd50bdf59da8626bbe446ce65a3",
 "canvaskit/skwasm.wasm": "4051bfc27ba29bf420d17aa0c3a98bce",
 "canvaskit/skwasm.worker.js": "bfb704a6c714a75da9ef320991e88b03",
-"favicon.png": "5dcef449791fa27946b3d35ad8803796",
+"favicon.png": "ae8cc07ba77493aaedfce40740a276a3",
 "flutter.js": "383e55f7f3cce5be08fcf1f3881f585c",
-"flutter_bootstrap.js": "2dfad3ead1e0a3b68f9e2b692d956c27",
-"icons/Icon-192.png": "ac9a721a12bbc803b44f645561ecb1e1",
-"icons/Icon-512.png": "96e752610906ba2a93c65f8abe1645f1",
-"icons/Icon-maskable-192.png": "c457ef57daa1d16f64b27b786ec2ea3c",
-"icons/Icon-maskable-512.png": "301a7604d45b3e739efc881eb04896ea",
+"flutter_bootstrap.js": "734c5c0a6a9080a976f97833680b5aab",
+"icons/logo.png": "ae8cc07ba77493aaedfce40740a276a3",
 "index.html": "15738663b0ee888e07bba7163be0a813",
 "/": "15738663b0ee888e07bba7163be0a813",
-"main.dart.js": "32ca122373e8dc6880b11d75bf6fdc4c",
-"manifest.json": "d8ca3499f73ae725fd2e4103088a1693",
+"main.dart.js": "f906d6d52a2a106e2dd9c0516d8154f3",
+"manifest.json": "7f64104d70a73c2d194b03dc3caed156",
 "version.json": "a40e5f5c7e1cd7c0d9afd9fa2ab856b5"};
 // The application shell files that are downloaded before a service worker can
 // start.
