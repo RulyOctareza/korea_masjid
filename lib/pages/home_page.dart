@@ -268,7 +268,7 @@ class _HomePageState extends State<HomePage> {
                 children: [
                   titleHeader(),
                   masjidPopuler(state.masjids),
-                  MasjidTerdekat(masjids: state.masjids),
+                 // MasjidTerdekat(masjids: state.masjids),
                   rekomendasiMasjid(state.masjids),
                 ],
               );
