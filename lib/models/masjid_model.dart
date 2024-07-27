@@ -18,6 +18,8 @@ class MasjidModel extends Equatable {
   final String photos5;
   final String photos6;
   final String comunity;
+  final double latitude;
+  final double longitude;
 
   const MasjidModel({
     required this.id,
@@ -37,6 +39,8 @@ class MasjidModel extends Equatable {
     this.photos5 = '',
     this.photos6 = '',
     this.comunity = '',
+    this.latitude = 0.0,
+    this.longitude = 0.0,
   });
 
   factory MasjidModel.fromJson(String id, Map<String, dynamic> json) =>
@@ -47,9 +51,6 @@ class MasjidModel extends Equatable {
           location: json['location'],
           address: json['address'],
           rating: json['rating'].toDouble(),
-          // kitchen: json['kitchen'],
-          // bedroom: json['bedroom'],
-          // lemari: json['lemari'],
           imageUrl: json['imageUrl'],
           photos1: json['photos1'],
           photos2: json['photos2'],
@@ -57,7 +58,9 @@ class MasjidModel extends Equatable {
           photos4: json['photos4'],
           photos5: json['photos5'],
           photos6: json['photos6'],
-          comunity: json['comunity']);
+          comunity: json['comunity'],
+          latitude: json['latitude'],
+          longitude: json['longitude']);
 
   Map<String, dynamic> toJson() => {
         'id': id,
@@ -67,9 +70,6 @@ class MasjidModel extends Equatable {
         'rating': rating,
         'location': location,
         'address': address,
-        // 'kitchen': kitchen,
-        // 'bedroom': bedroom,
-        // 'lemari': lemari,
         'photos1': photos1,
         'photos2': photos2,
         'photos3': photos3,
@@ -77,6 +77,8 @@ class MasjidModel extends Equatable {
         'photos5': photos5,
         'photos6': photos6,
         'comunity': comunity,
+        'latitude': latitude,
+        'longitude': longitude,
       };
 
   @override
@@ -97,5 +99,7 @@ class MasjidModel extends Equatable {
         photos5,
         photos6,
         comunity,
+        latitude,
+        longitude,
       ];
 }
