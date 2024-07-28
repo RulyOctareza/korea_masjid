@@ -5,7 +5,6 @@ import 'package:masjidkorea/cubit/theme_cubit.dart';
 import 'package:masjidkorea/models/masjid_model.dart';
 import 'package:masjidkorea/pages/blog.dart';
 import 'package:masjidkorea/pages/comunity_masjid_page.dart';
-import 'package:masjidkorea/pages/masjid_terdekat.dart';
 import 'package:masjidkorea/pages/search_page.dart';
 import 'package:masjidkorea/theme.dart';
 import 'package:masjidkorea/widgets/space_card.dart';
@@ -268,7 +267,6 @@ class _HomePageState extends State<HomePage> {
                 children: [
                   titleHeader(),
                   masjidPopuler(state.masjids),
-                 // MasjidTerdekat(masjids: state.masjids),
                   rekomendasiMasjid(state.masjids),
                 ],
               );
