@@ -195,6 +195,7 @@ class _HomePageState extends State<HomePage> {
       );
     }
 
+    // ignore: unused_element
     Widget tipsGuidance() {
       return Column(
         crossAxisAlignment: CrossAxisAlignment.start,

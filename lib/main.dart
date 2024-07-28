@@ -8,6 +8,7 @@ import 'package:masjidkorea/firebase_options.dart';
 import 'package:masjidkorea/pages/splash_page.dart';
 import 'package:masjidkorea/theme.dart';
 
+
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await Firebase.initializeApp(

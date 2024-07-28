@@ -6,7 +6,7 @@ class MasjidDistanceCard extends StatelessWidget {
   final MasjidModel masjid;
   final double distance;
 
-  const MasjidDistanceCard({required this.masjid, required this.distance, Key? key}) : super(key: key);
+  const MasjidDistanceCard({required this.masjid, required this.distance, super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -17,7 +17,7 @@ class MasjidDistanceCard extends StatelessWidget {
           Expanded(
             child: SpaceCard(masjid),
           ),
-          SizedBox(width: 5),
+          const SizedBox(width: 5),
           Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
@@ -27,7 +27,7 @@ class MasjidDistanceCard extends StatelessWidget {
               ),
             ],
           ),
-          SizedBox(width: 10,)
+          const SizedBox(width: 10,)
         ],
       ),
     );
