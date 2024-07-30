@@ -3,6 +3,11 @@ import 'package:geolocator/geolocator.dart';
 import 'package:masjidkorea/models/distance_calc.dart';
 import 'package:masjidkorea/models/masjid_model.dart';
 import 'package:masjidkorea/pages/masjid_distance_card.dart';
+import 'package:flutter/foundation.dart' show kIsWeb;
+// ignore: avoid_web_libraries_in_flutter
+import 'dart:html' as html;
+
+
 
 class MasjidTerdekat extends StatefulWidget {
   final List<MasjidModel> masjids;
@@ -25,12 +30,50 @@ class _MasjidTerdekatState extends State<MasjidTerdekat> {
   }
 
   Future<void> _getLocation() async {
+    if (kIsWeb) {
+      await _getLocationWeb();
+    } else {
+      await _getLocationNative();
+    }
+  }
+
+  Future<void> _getLocationWeb() async {
+  try {
+    await html.window.navigator.geolocation.getCurrentPosition().then((position) {
+      setState(() {
+        _currentPosition = Position(
+          latitude: position.coords!.latitude!.toDouble(),
+          longitude: position.coords!.longitude!.toDouble(),
+          timestamp: DateTime.now(),
+          accuracy: position.coords!.accuracy?.toDouble() ?? 0.0,
+          altitude: position.coords!.altitude?.toDouble() ?? 0.0,
+          heading: position.coords!.heading?.toDouble() ?? 0.0,
+          speed: position.coords!.speed?.toDouble() ?? 0.0,
+          speedAccuracy: 0.0, altitudeAccuracy: 0, headingAccuracy: 0,
+        );
+        _permissionGranted = true;
+        _locationServiceEnabled = true;
+      });
+    });
+  } catch (e) {
+    print('Error getting location on web: $e');
+    setState(() {
+      _permissionGranted = false;
+      _locationServiceEnabled = false;
+    });
+  }
+}
+
+  Future<void> _getLocationNative() async {
     bool serviceEnabled;
     LocationPermission permission;
 
     serviceEnabled = await Geolocator.isLocationServiceEnabled();
     if (!serviceEnabled) {
       print('Location services are disabled.');
+      setState(() {
+        _locationServiceEnabled = false;
+      });
       return;
     }
 
@@ -39,17 +82,25 @@ class _MasjidTerdekatState extends State<MasjidTerdekat> {
       permission = await Geolocator.requestPermission();
       if (permission == LocationPermission.denied) {
         print('Location permission denied.');
+        setState(() {
+          _permissionGranted = false;
+        });
         return;
       }
     }
 
     if (permission == LocationPermission.deniedForever) {
       print('Location permissions are permanently denied.');
+      setState(() {
+        _permissionGranted = false;
+      });
       return;
     }
 
-    _permissionGranted = true;
-    _locationServiceEnabled = true;
+    setState(() {
+      _permissionGranted = true;
+      _locationServiceEnabled = true;
+    });
 
     Position position = await Geolocator.getCurrentPosition(desiredAccuracy: LocationAccuracy.high);
     print('Location data: ${position.latitude}, ${position.longitude}');
@@ -85,8 +136,17 @@ class _MasjidTerdekatState extends State<MasjidTerdekat> {
   @override
   Widget build(BuildContext context) {
     if (!_locationServiceEnabled || !_permissionGranted) {
-      return const Center(
-        child: Text('Location services are disabled or permission denied.'),
+      return Center(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            const Text('Layanan lokasi tidak aktif atau izin ditolak.'),
+            ElevatedButton(
+              onPressed: _getLocation,
+              child: const Text('Coba lagi'),
+            ),
+          ],
+        ),
       );
     }
 
