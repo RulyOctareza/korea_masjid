@@ -6,7 +6,8 @@ class MasjidDistanceCard extends StatelessWidget {
   final MasjidModel masjid;
   final double distance;
 
-  const MasjidDistanceCard({required this.masjid, required this.distance, super.key});
+  const MasjidDistanceCard(
+      {required this.masjid, required this.distance, super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -23,11 +24,16 @@ class MasjidDistanceCard extends StatelessWidget {
             children: [
               Text(
                 '${distance.toStringAsFixed(2)} km',
-                style: Theme.of(context).textTheme.bodySmall?.copyWith(color: Colors.grey),
+                style: Theme.of(context)
+                    .textTheme
+                    .bodyLarge
+                    ?.copyWith(color: Colors.grey),
               ),
             ],
           ),
-          const SizedBox(width: 10,)
+          const SizedBox(
+            width: 10,
+          )
         ],
       ),
     );

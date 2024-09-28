@@ -1,13 +1,15 @@
 import 'package:flutter/material.dart';
 import 'package:masjidkorea/models/masjid_model.dart';
 import 'package:masjidkorea/pages/detail_page.dart';
+import 'package:masjidkorea/pages/masjid_distance_card.dart';
 
 import '../theme.dart';
 
 class SpaceCard extends StatelessWidget {
   final MasjidModel masjid;
+  final double? distance; // Menambahkan parameter distance opsional
 
-  const SpaceCard(this.masjid, {super.key});
+  const SpaceCard(this.masjid, {this.distance, super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -24,8 +26,8 @@ class SpaceCard extends StatelessWidget {
         );
       },
       child: Container(
-        // margin:
-        //     EdgeInsets.symmetric(vertical: 2), // Mengurangi jarak antar card
+        margin: EdgeInsets.symmetric(
+            vertical: 5, horizontal: edge), // Mengurangi jarak antar card
         padding: EdgeInsets.symmetric(
             horizontal: edge,
             vertical: 8), // Mengurangi padding agar lebih ringkas
@@ -35,7 +37,7 @@ class SpaceCard extends StatelessWidget {
               : Colors.white, // Warna card abu-abu jika mode gelap
           borderRadius:
               BorderRadius.circular(15), // Card dengan rounded corners
-          boxShadow: [
+          boxShadow: const [
             BoxShadow(
               color: Colors.black12,
               blurRadius: 10,
@@ -104,6 +106,14 @@ class SpaceCard extends StatelessWidget {
                     overflow: TextOverflow
                         .ellipsis, // Tambahkan elipsis jika teks terlalu panjang
                   ),
+                  const SizedBox(height: 10),
+                  if (distance != null) // Tampilkan jika distance diberikan
+                    Text(
+                      '${distance!.toStringAsFixed(2)} km',
+                      style: Theme.of(context).textTheme.bodyMedium?.copyWith(
+                            color: Colors.grey, // Warna abu-abu untuk jarak
+                          ),
+                    ),
                 ],
               ),
             ),

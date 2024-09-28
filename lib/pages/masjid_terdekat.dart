@@ -10,6 +10,7 @@ import 'package:geolocator/geolocator.dart';
 import 'package:masjidkorea/models/distance_calc.dart';
 import 'package:masjidkorea/models/masjid_model.dart';
 import 'package:masjidkorea/pages/masjid_distance_card.dart';
+import 'package:masjidkorea/widgets/space_card.dart';
 
 class MasjidTerdekat extends StatefulWidget {
   final List<MasjidModel> masjids;
@@ -183,7 +184,7 @@ class _MasjidTerdekatState extends State<MasjidTerdekat> {
             masjid.longitude,
           );
 
-          return MasjidDistanceCard(masjid: masjid, distance: distance);
+          return SpaceCard(masjid, distance: distance);
         }),
       ],
     );
