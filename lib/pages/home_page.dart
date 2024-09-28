@@ -197,56 +197,56 @@ class _HomePageState extends State<HomePage> {
     }
 
     // ignore: unused_element
-    Widget tipsGuidance() {
-      return Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-          Padding(
-            padding: EdgeInsets.only(left: edge, top: 20),
-            child: Text(
-              'Tips & Guidance',
-              style: Theme.of(context).textTheme.bodyMedium?.copyWith(
-                    fontSize: 16,
-                  ),
-            ),
-          ),
-          const SizedBox(height: 16),
-          Padding(
-            padding: EdgeInsets.symmetric(horizontal: edge),
-            child: Column(
-              children: [
-                InkWell(
-                  onTap: () {
-                    Navigator.push(
-                      context,
-                      MaterialPageRoute(builder: (context) => const BlogPage()),
-                    );
-                  },
-                  child: TipsCard(
-                    Tips(
-                      id: 1,
-                      title: 'Tips Berkunjung ke Masjid',
-                      imageUrl: 'assets/tips1.png',
-                      updatedAt: '10 Jun',
-                    ),
-                  ),
-                ),
-                const SizedBox(height: 20),
-                TipsCard(
-                  Tips(
-                    id: 2,
-                    title: 'Tips bepergian \ndi Korea Selatan',
-                    imageUrl: 'assets/tips2.png',
-                    updatedAt: '11 Jun',
-                  ),
-                ),
-              ],
-            ),
-          ),
-          SizedBox(height: 100 + edge),
-        ],
-      );
-    }
+    // Widget tipsGuidance() {
+    //   return Column(
+    //     crossAxisAlignment: CrossAxisAlignment.start,
+    //     children: [
+    //       Padding(
+    //         padding: EdgeInsets.only(left: edge, top: 20),
+    //         child: Text(
+    //           'Tips & Guidance',
+    //           style: Theme.of(context).textTheme.bodyMedium?.copyWith(
+    //                 fontSize: 16,
+    //               ),
+    //         ),
+    //       ),
+    //       const SizedBox(height: 16),
+    //       Padding(
+    //         padding: EdgeInsets.symmetric(horizontal: edge),
+    //         child: Column(
+    //           children: [
+    //             InkWell(
+    //               onTap: () {
+    //                 Navigator.push(
+    //                   context,
+    //                   MaterialPageRoute(builder: (context) => const BlogPage()),
+    //                 );
+    //               },
+    //               child: TipsCard(
+    //                 Tips(
+    //                   id: 1,
+    //                   title: 'Tips Berkunjung ke Masjid',
+    //                   imageUrl: 'assets/tips1.png',
+    //                   updatedAt: '10 Jun',
+    //                 ),
+    //               ),
+    //             ),
+    //             const SizedBox(height: 20),
+    //             TipsCard(
+    //               Tips(
+    //                 id: 2,
+    //                 title: 'Tips bepergian \ndi Korea Selatan',
+    //                 imageUrl: 'assets/tips2.png',
+    //                 updatedAt: '11 Jun',
+    //               ),
+    //             ),
+    //           ],
+    //         ),
+    //       ),
+    //       SizedBox(height: 100 + edge),
+    //     ],
+    //   );
+    // }
 
     return Scaffold(
       backgroundColor: Theme.of(context).scaffoldBackgroundColor,

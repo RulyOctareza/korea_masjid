@@ -35,38 +35,38 @@ class SpaceCard extends StatelessWidget {
                       decoration: BoxDecoration(
                           image: DecorationImage(
                               image: NetworkImage(masjid.imageUrl),
-                              fit: BoxFit.cover)),
+                              fit: BoxFit.fill)),
                     ),
-                    Align(
-                      alignment: Alignment.topRight,
-                      child: Container(
-                        width: 70,
-                        height: 30,
-                        decoration: BoxDecoration(
-                          color: purpleColor,
-                          borderRadius: const BorderRadius.only(
-                            bottomLeft: Radius.circular(36),
-                          ),
-                        ),
-                        child: Row(
-                          mainAxisAlignment: MainAxisAlignment.center,
-                          crossAxisAlignment: CrossAxisAlignment.center,
-                          children: [
-                            Image.asset(
-                              'assets/icon_star.png',
-                              width: 22,
-                              height: 22,
-                            ),
-                            Text(
-                              masjid.rating.toString(),
-                              style: whiteTextStyle.copyWith(
-                                fontSize: 13,
-                              ),
-                            ),
-                          ],
-                        ),
-                      ),
-                    ),
+                    // Align(
+                    //   alignment: Alignment.topRight,
+                    //   child: Container(
+                    //     width: 70,
+                    //     height: 30,
+                    //     decoration: BoxDecoration(
+                    //       color: purpleColor,
+                    //       borderRadius: const BorderRadius.only(
+                    //         bottomLeft: Radius.circular(36),
+                    //       ),
+                    //     ),
+                    //     child: Row(
+                    //       mainAxisAlignment: MainAxisAlignment.center,
+                    //       crossAxisAlignment: CrossAxisAlignment.center,
+                    //       children: [
+                    //         Image.asset(
+                    //           'assets/icon_star.png',
+                    //           width: 22,
+                    //           height: 22,
+                    //         ),
+                    //         Text(
+                    //           masjid.rating.toString(),
+                    //           style: whiteTextStyle.copyWith(
+                    //             fontSize: 13,
+                    //           ),
+                    //         ),
+                    //       ],
+                    //     ),
+                    //   ),
+                    // ),
                   ],
                 ),
               ),

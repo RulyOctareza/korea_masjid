@@ -54,7 +54,8 @@ class _SearchPageState extends State<SearchPage> {
           border: OutlineInputBorder(
             borderRadius: BorderRadius.circular(8.0),
           ),
-          contentPadding: const EdgeInsets.symmetric(vertical: 0, horizontal: 16.0),
+          contentPadding:
+              const EdgeInsets.symmetric(vertical: 0, horizontal: 16.0),
         ),
       ),
     );
@@ -108,10 +109,84 @@ class _SearchPageState extends State<SearchPage> {
               if (_filteredMasjids.isEmpty) {
                 _filteredMasjids = state.masjids;
               }
-              return ListView(
-                children: [
-                  daftarMasjid(state.masjids),
-                ],
+              return LayoutBuilder(
+                builder: (context, constraints) {
+                  if (constraints.maxWidth < 600) {
+                    // Layout untuk layar kecil (mobile/tablet)
+                    return ListView(
+                      children: [
+                        daftarMasjid(state.masjids),
+                      ],
+                    );
+                  } else {
+                    // Layout untuk layar besar (desktop/laptop)
+                    return Center(
+                      child: Padding(
+                        padding: const EdgeInsets.all(16.0),
+                        child: Row(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            // Gambar dalam bentuk card kotak
+                            Expanded(
+                              flex: 1,
+                              child: Card(
+                                shape: RoundedRectangleBorder(
+                                  borderRadius: BorderRadius.circular(16.0),
+                                ),
+                                elevation: 4,
+                                child: SizedBox(
+                                  height: 300,
+                                  // Ganti dengan gambar yang sesuai
+                                  child: ClipRRect(
+                                    borderRadius: BorderRadius.circular(16.0),
+                                    child: Image.asset(
+                                      'assets/images/masjid.jpg', // Pastikan gambar ada di folder assets
+                                      fit: BoxFit.cover,
+                                    ),
+                                  ),
+                                ),
+                              ),
+                            ),
+                            const SizedBox(width: 32),
+                            // Teks dan tombol di samping kanan
+                            Expanded(
+                              flex: 1,
+                              child: Column(
+                                crossAxisAlignment: CrossAxisAlignment.start,
+                                children: [
+                                  Text(
+                                    'Selamat Datang di Korea Masjid',
+                                    style: Theme.of(context)
+                                        .textTheme
+                                        .headlineMedium
+                                        ?.copyWith(
+                                          fontWeight: FontWeight.bold,
+                                        ),
+                                  ),
+                                  const SizedBox(height: 16),
+                                  Text(
+                                    'Temukan masjid terdekat di Korea Selatan dengan mudah dan cepat.',
+                                    style: Theme.of(context)
+                                        .textTheme
+                                        .bodyMedium
+                                        ?.copyWith(fontSize: 16),
+                                  ),
+                                  const SizedBox(height: 24),
+                                  ElevatedButton(
+                                    onPressed: () {
+                                      // Aksi tombol
+                                    },
+                                    child: const Text('Mulai Cari'),
+                                  ),
+                                ],
+                              ),
+                            ),
+                          ],
+                        ),
+                      ),
+                    );
+                  }
+                },
               );
             }
             return const Center(

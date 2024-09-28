@@ -37,18 +37,19 @@ class _DetailPageState extends State<DetailPage> {
           body: SafeArea(
             bottom: false,
             child: Stack(
+              alignment: AlignmentDirectional.topCenter,
               children: [
                 Image.network(
                   widget.masjid.imageUrl,
-                  width: MediaQuery.of(context).size.width,
-                  height: 350,
+                  width: 300,
+                  height: 300,
                   fit: BoxFit.cover,
                   semanticLabel: 'Name of Masjid',
                 ),
                 Container(
                   padding: EdgeInsets.symmetric(
                     horizontal: edge,
-                    vertical: 30,
+                    vertical: 40,
                   ),
                   child: const Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -100,7 +101,7 @@ class _DetailPageState extends State<DetailPage> {
                                                 ?.copyWith(
                                                   fontSize: 16,
                                                 ),
-                                            overflow: TextOverflow.ellipsis,
+                                            // overflow: TextOverflow.ellipsis,
                                           ),
                                           const SizedBox(height: 4),
                                           Text(
@@ -121,25 +122,25 @@ class _DetailPageState extends State<DetailPage> {
                                             onTap: () {
                                               Navigator.pop(context);
                                             },
-                                            child:
-                                                const Icon(Icons.arrow_back_ios_new)),
-                                        Image.asset(
-                                          'assets/icon_star.png',
-                                          width: 28,
-                                          height: 28,
-                                        ),
-                                        const SizedBox(
-                                          width: 6,
-                                        ),
-                                        Text(
-                                          widget.masjid.rating.toString(),
-                                          style: Theme.of(context)
-                                              .textTheme
-                                              .bodyLarge
-                                              ?.copyWith(
-                                                fontSize: 18,
-                                              ),
-                                        ),
+                                            child: const Icon(
+                                                Icons.arrow_back_ios_new)),
+                                        // Image.asset(
+                                        //   'assets/icon_star.png',
+                                        //   width: 28,
+                                        //   height: 28,
+                                        // ),
+                                        // const SizedBox(
+                                        //   width: 6,
+                                        // ),
+                                        // Text(
+                                        //   widget.masjid.rating.toString(),
+                                        //   style: Theme.of(context)
+                                        //       .textTheme
+                                        //       .bodyLarge
+                                        //       ?.copyWith(
+                                        //         fontSize: 18,
+                                        //       ),
+                                        // ),
                                       ],
                                     ),
                                   ],
@@ -237,9 +238,7 @@ class _DetailPageState extends State<DetailPage> {
                                       width: 200,
                                       child: Text(
                                         widget.masjid.location,
-                                        style: greyTextStyle.copyWith(
-                                            overflow: TextOverflow.ellipsis),
-                                        overflow: TextOverflow.ellipsis,
+                                        style: greyTextStyle,
                                       ),
                                     ),
                                     GestureDetector(

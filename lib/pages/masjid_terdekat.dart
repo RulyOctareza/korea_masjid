@@ -1,13 +1,15 @@
+// ignore: avoid_web_libraries_in_flutter
+// ignore_for_file: avoid_print
+
+import 'dart:html' as html;
+
+import 'package:flutter/foundation.dart' show kIsWeb;
 import 'package:flutter/material.dart';
 import 'package:geolocator/geolocator.dart';
+
 import 'package:masjidkorea/models/distance_calc.dart';
 import 'package:masjidkorea/models/masjid_model.dart';
 import 'package:masjidkorea/pages/masjid_distance_card.dart';
-import 'package:flutter/foundation.dart' show kIsWeb;
-// ignore: avoid_web_libraries_in_flutter
-import 'dart:html' as html;
-
-
 
 class MasjidTerdekat extends StatefulWidget {
   final List<MasjidModel> masjids;
@@ -38,31 +40,35 @@ class _MasjidTerdekatState extends State<MasjidTerdekat> {
   }
 
   Future<void> _getLocationWeb() async {
-  try {
-    await html.window.navigator.geolocation.getCurrentPosition().then((position) {
-      setState(() {
-        _currentPosition = Position(
-          latitude: position.coords!.latitude!.toDouble(),
-          longitude: position.coords!.longitude!.toDouble(),
-          timestamp: DateTime.now(),
-          accuracy: position.coords!.accuracy?.toDouble() ?? 0.0,
-          altitude: position.coords!.altitude?.toDouble() ?? 0.0,
-          heading: position.coords!.heading?.toDouble() ?? 0.0,
-          speed: position.coords!.speed?.toDouble() ?? 0.0,
-          speedAccuracy: 0.0, altitudeAccuracy: 0, headingAccuracy: 0,
-        );
-        _permissionGranted = true;
-        _locationServiceEnabled = true;
+    try {
+      await html.window.navigator.geolocation
+          .getCurrentPosition()
+          .then((position) {
+        setState(() {
+          _currentPosition = Position(
+            latitude: position.coords!.latitude!.toDouble(),
+            longitude: position.coords!.longitude!.toDouble(),
+            timestamp: DateTime.now(),
+            accuracy: position.coords!.accuracy?.toDouble() ?? 0.0,
+            altitude: position.coords!.altitude?.toDouble() ?? 0.0,
+            heading: position.coords!.heading?.toDouble() ?? 0.0,
+            speed: position.coords!.speed?.toDouble() ?? 0.0,
+            speedAccuracy: 0.0,
+            altitudeAccuracy: 0,
+            headingAccuracy: 0,
+          );
+          _permissionGranted = true;
+          _locationServiceEnabled = true;
+        });
       });
-    });
-  } catch (e) {
-    print('Error getting location on web: $e');
-    setState(() {
-      _permissionGranted = false;
-      _locationServiceEnabled = false;
-    });
+    } catch (e) {
+      print('Error getting location on web: $e');
+      setState(() {
+        _permissionGranted = false;
+        _locationServiceEnabled = false;
+      });
+    }
   }
-}
 
   Future<void> _getLocationNative() async {
     bool serviceEnabled;
@@ -102,7 +108,8 @@ class _MasjidTerdekatState extends State<MasjidTerdekat> {
       _locationServiceEnabled = true;
     });
 
-    Position position = await Geolocator.getCurrentPosition(desiredAccuracy: LocationAccuracy.high);
+    Position position = await Geolocator.getCurrentPosition(
+        desiredAccuracy: LocationAccuracy.high);
     print('Location data: ${position.latitude}, ${position.longitude}');
     setState(() {
       _currentPosition = position;
@@ -177,7 +184,7 @@ class _MasjidTerdekatState extends State<MasjidTerdekat> {
           );
 
           return MasjidDistanceCard(masjid: masjid, distance: distance);
-        }).toList(),
+        }),
       ],
     );
   }
