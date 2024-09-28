@@ -30,7 +30,7 @@ const RESOURCES = {"assets/AssetManifest.bin": "a868b0743d14d19ff7c37e8394b5996f
 "assets/assets/logokmi.png": "de4b36157c5b62dcbb40889589a9d0a4",
 "assets/assets/MITRAPUMITA.jpg": "dda006a1e52a61d7388b0b7aba66ec3a",
 "assets/FontManifest.json": "dc3d03800ccca4601324923c0b1d6d57",
-"assets/fonts/MaterialIcons-Regular.otf": "8129e426d4520c139cb65636d84f4140",
+"assets/fonts/MaterialIcons-Regular.otf": "eb6c1188c0ef975a87ddc10d193e3493",
 "assets/NOTICES": "3be1041d58af14b6905d92bccbccf89e",
 "assets/packages/cupertino_icons/assets/CupertinoIcons.ttf": "e986ebe42ef785b27164c36a9abc7818",
 "assets/shaders/ink_sparkle.frag": "ecc85a2e95f5e9f53123dcaf8cb9b6ce",
@@ -46,11 +46,11 @@ const RESOURCES = {"assets/AssetManifest.bin": "a868b0743d14d19ff7c37e8394b5996f
 "canvaskit/skwasm.worker.js": "89990e8c92bcb123999aa81f7e203b1c",
 "favicon.png": "ae8cc07ba77493aaedfce40740a276a3",
 "flutter.js": "f393d3c16b631f36852323de8e583132",
-"flutter_bootstrap.js": "d504140f29104456119cbb9734409e1f",
+"flutter_bootstrap.js": "695ebaae58ff6e2c25f92f381154684b",
 "icons/logo.png": "ae8cc07ba77493aaedfce40740a276a3",
 "index.html": "bff5071c3df15afc408a8f34e78c0f1c",
 "/": "bff5071c3df15afc408a8f34e78c0f1c",
-"main.dart.js": "91594cf3ef5cd6f6359b2692e1ca6b9f",
+"main.dart.js": "1fc375db343e911bac918cd06a41b2b7",
 "manifest.json": "7f64104d70a73c2d194b03dc3caed156",
 "version.json": "a40e5f5c7e1cd7c0d9afd9fa2ab856b5"};
 // The application shell files that are downloaded before a service worker can

@@ -137,7 +137,7 @@ class _MasjidTerdekatState extends State<MasjidTerdekat> {
       return distanceA.compareTo(distanceB);
     });
 
-    return masjids.take(5).toList();
+    return masjids.take(10).toList();
   }
 
   @override

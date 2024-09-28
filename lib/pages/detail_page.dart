@@ -39,12 +39,15 @@ class _DetailPageState extends State<DetailPage> {
             child: Stack(
               alignment: AlignmentDirectional.topCenter,
               children: [
-                Image.network(
-                  widget.masjid.imageUrl,
-                  width: 300,
-                  height: 300,
-                  fit: BoxFit.cover,
-                  semanticLabel: 'Name of Masjid',
+                ClipRRect(
+                  borderRadius: BorderRadius.circular(15),
+                  child: Image.network(
+                    widget.masjid.imageUrl,
+                    width: 300,
+                    height: 300,
+                    fit: BoxFit.cover,
+                    semanticLabel: 'Name of Masjid',
+                  ),
                 ),
                 Container(
                   padding: EdgeInsets.symmetric(
@@ -178,32 +181,54 @@ class _DetailPageState extends State<DetailPage> {
                                     scrollDirection: Axis.horizontal,
                                     children: [
                                       const SizedBox(width: 24),
-                                      Image.network(
-                                        widget.masjid.photos1,
-                                        width: 110,
-                                        height: 88,
-                                        fit: BoxFit.cover,
+                                      ClipRRect(
+                                        borderRadius: BorderRadius.circular(15),
+                                        child: Image.network(
+                                          widget.masjid.photos1,
+                                          width: 110,
+                                          height: 88,
+                                          fit: BoxFit.cover,
+                                        ),
                                       ),
                                       const SizedBox(width: 18),
-                                      Image.network(
-                                        widget.masjid.photos2,
-                                        width: 110,
-                                        height: 88,
-                                        fit: BoxFit.cover,
+                                      ClipRRect(
+                                        borderRadius: BorderRadius.circular(15),
+                                        child: Image.network(
+                                          widget.masjid.photos2,
+                                          width: 110,
+                                          height: 88,
+                                          fit: BoxFit.cover,
+                                        ),
                                       ),
                                       const SizedBox(width: 18),
-                                      Image.network(
-                                        widget.masjid.photos3,
-                                        width: 110,
-                                        height: 88,
-                                        fit: BoxFit.cover,
+                                      ClipRRect(
+                                        borderRadius: BorderRadius.circular(15),
+                                        child: Image.network(
+                                          widget.masjid.photos3,
+                                          width: 110,
+                                          height: 88,
+                                          fit: BoxFit.cover,
+                                        ),
                                       ),
                                       const SizedBox(width: 18),
-                                      Image.network(
-                                        widget.masjid.photos4,
-                                        width: 110,
-                                        height: 88,
-                                        fit: BoxFit.cover,
+                                      ClipRRect(
+                                        borderRadius: BorderRadius.circular(15),
+                                        child: Image.network(
+                                          widget.masjid.photos4,
+                                          width: 110,
+                                          height: 88,
+                                          fit: BoxFit.cover,
+                                        ),
+                                      ),
+                                      const SizedBox(width: 18),
+                                      ClipRRect(
+                                        borderRadius: BorderRadius.circular(15),
+                                        child: Image.network(
+                                          widget.masjid.photos5,
+                                          width: 110,
+                                          height: 88,
+                                          fit: BoxFit.cover,
+                                        ),
                                       ),
                                       const SizedBox(width: 18),
                                     ],

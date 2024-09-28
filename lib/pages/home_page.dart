@@ -3,14 +3,11 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:masjidkorea/cubit/masjid_cubit.dart';
 import 'package:masjidkorea/cubit/theme_cubit.dart';
 import 'package:masjidkorea/models/masjid_model.dart';
-import 'package:masjidkorea/pages/blog.dart';
 import 'package:masjidkorea/pages/comunity_masjid_page.dart';
 import 'package:masjidkorea/pages/masjid_terdekat.dart';
 import 'package:masjidkorea/pages/search_page.dart';
 import 'package:masjidkorea/theme.dart';
 import 'package:masjidkorea/widgets/space_card.dart';
-import 'package:masjidkorea/widgets/tips.dart';
-import 'package:masjidkorea/widgets/tips_card.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
@@ -270,7 +267,7 @@ class _HomePageState extends State<HomePage> {
                   titleHeader(),
                   masjidPopuler(state.masjids),
                   MasjidTerdekat(masjids: state.masjids),
-                  rekomendasiMasjid(state.masjids),
+                  // rekomendasiMasjid(state.masjids),
                 ],
               );
             }
