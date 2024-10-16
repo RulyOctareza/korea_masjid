@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:masjidkorea/models/masjid_model.dart';
 import 'package:masjidkorea/pages/detail_page.dart';
-import 'package:masjidkorea/pages/masjid_distance_card.dart';
 
 import '../theme.dart';
 

@@ -9,7 +9,6 @@ import 'package:geolocator/geolocator.dart';
 
 import 'package:masjidkorea/models/distance_calc.dart';
 import 'package:masjidkorea/models/masjid_model.dart';
-import 'package:masjidkorea/pages/masjid_distance_card.dart';
 import 'package:masjidkorea/widgets/space_card.dart';
 
 class MasjidTerdekat extends StatefulWidget {
