@@ -18,7 +18,7 @@ class CommunityMasjidPage extends StatelessWidget {
             themeMode == ThemeMode.dark ? kDefaultIconDarkColor : whiteColor,
         appBar: AppBar(
           title: Text(
-            'Masjid di Wilayah $community',
+            'Mosque in Area $community',
             style:
                 themeMode == ThemeMode.dark ? whiteTextStyle : blackTextStyle,
           ),
@@ -36,7 +36,7 @@ class CommunityMasjidPage extends StatelessWidget {
 
               if (masjids.isEmpty) {
                 return const Center(
-                  child: Text('Tidak ada masjid untuk komunitas ini.'),
+                  child: Text('No Mosque in the Community'),
                 );
               }
 
@@ -59,11 +59,11 @@ class CommunityMasjidPage extends StatelessWidget {
               );
             } else if (state is MasjidFailed) {
               return Center(
-                child: Text('Gagal memuat masjid: ${state.error}'),
+                child: Text('Failed to load Mosque: ${state.error}'),
               );
             } else {
               return const Center(
-                child: Text('Tidak ada data masjid.'),
+                child: Text('No Mosque'),
               );
             }
           },

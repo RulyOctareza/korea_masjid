@@ -147,10 +147,10 @@ class _MasjidTerdekatState extends State<MasjidTerdekat> {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            const Text('Layanan lokasi tidak aktif atau izin ditolak.'),
+            const Text('Please allow location services !'),
             ElevatedButton(
               onPressed: _getLocation,
-              child: const Text('Coba lagi'),
+              child: const Text('Try Again !'),
             ),
           ],
         ),
@@ -171,7 +171,7 @@ class _MasjidTerdekatState extends State<MasjidTerdekat> {
         Padding(
           padding: const EdgeInsets.all(16.0),
           child: Text(
-            'Masjid - Masjid terdekat dengan anda',
+            'Mosques closest to you',
             style: Theme.of(context).textTheme.bodyMedium,
           ),
         ),

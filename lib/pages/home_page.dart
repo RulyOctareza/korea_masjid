@@ -71,7 +71,7 @@ class _HomePageState extends State<HomePage> {
             Padding(
               padding: EdgeInsets.only(left: edge),
               child: Text(
-                'Komunitas - komunitas Masjid',
+                'Community of Mosque',
                 style: Theme.of(context).textTheme.bodyLarge?.copyWith(
                       fontSize: 16,
                     ),
@@ -154,7 +154,7 @@ class _HomePageState extends State<HomePage> {
           Padding(
             padding: EdgeInsets.only(left: edge),
             child: Text(
-              'Yuk ke Masjid terdekat',
+              'Let\'s go to Mosque !',
               style: Theme.of(context).textTheme.titleMedium,
             ),
           ),
