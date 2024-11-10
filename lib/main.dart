@@ -6,7 +6,6 @@ import 'package:masjidkorea/cubit/page_cubit.dart';
 import 'package:masjidkorea/cubit/theme_cubit.dart';
 import 'package:masjidkorea/firebase_options.dart';
 import 'package:masjidkorea/pages/home_page.dart';
-import 'package:masjidkorea/pages/splash_page.dart';
 import 'package:masjidkorea/theme.dart';
 
 void main() async {

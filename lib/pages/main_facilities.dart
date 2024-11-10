@@ -10,7 +10,7 @@ class MainFacilities extends StatefulWidget {
   const MainFacilities({super.key, required this.masjid});
 
   @override
-  _MainFacilitiesState createState() => _MainFacilitiesState();
+  State<MainFacilities> createState() => _MainFacilitiesState();
 }
 
 class _MainFacilitiesState extends State<MainFacilities> {

@@ -17,7 +17,7 @@ class MasjidTerdekat extends StatefulWidget {
   const MasjidTerdekat({required this.masjids, super.key});
 
   @override
-  _MasjidTerdekatState createState() => _MasjidTerdekatState();
+  State<MasjidTerdekat> createState() => _MasjidTerdekatState();
 }
 
 class _MasjidTerdekatState extends State<MasjidTerdekat> {

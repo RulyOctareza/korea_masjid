@@ -249,32 +249,41 @@ class _HomePageState extends State<HomePage> {
       backgroundColor: Theme.of(context).scaffoldBackgroundColor,
       body: SafeArea(
         bottom: false,
-        child: BlocConsumer<MasjidCubit, MasjidState>(
-          listener: (context, state) {
-            if (state is MasjidFailed) {
-              ScaffoldMessenger.of(context).showSnackBar(
-                SnackBar(
-                  backgroundColor: purpleColor,
-                  content: Text(state.error), // Tampilkan pesan kesalahan
-                ),
-              );
-            }
-          },
-          builder: (context, state) {
-            if (state is MasjidSuccess) {
-              return ListView(
-                children: [
-                  titleHeader(),
-                  masjidPopuler(state.masjids),
-                  MasjidTerdekat(masjids: state.masjids),
-                  // rekomendasiMasjid(state.masjids),
-                ],
-              );
-            }
-            return const Center(
-              child: CircularProgressIndicator(),
-            );
-          },
+        child: Center(
+          // Tambahkan Center widget
+          child: ConstrainedBox(
+            // Tambahkan ConstrainedBox untuk membatasi lebar
+            constraints: BoxConstraints(
+              maxWidth: 500, // Maksimal lebar 500px
+            ),
+            child: BlocConsumer<MasjidCubit, MasjidState>(
+              listener: (context, state) {
+                if (state is MasjidFailed) {
+                  ScaffoldMessenger.of(context).showSnackBar(
+                    SnackBar(
+                      backgroundColor: purpleColor,
+                      content: Text(state.error),
+                    ),
+                  );
+                }
+              },
+              builder: (context, state) {
+                if (state is MasjidSuccess) {
+                  return ListView(
+                    children: [
+                      titleHeader(),
+                      masjidPopuler(state.masjids),
+                      MasjidTerdekat(masjids: state.masjids),
+                      // rekomendasiMasjid(state.masjids),
+                    ],
+                  );
+                }
+                return const Center(
+                  child: CircularProgressIndicator(),
+                );
+              },
+            ),
+          ),
         ),
       ),
       floatingActionButtonLocation: FloatingActionButtonLocation.centerFloat,
