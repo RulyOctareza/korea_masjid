@@ -254,7 +254,7 @@ class _HomePageState extends State<HomePage> {
           child: ConstrainedBox(
             // Tambahkan ConstrainedBox untuk membatasi lebar
             constraints: BoxConstraints(
-              maxWidth: 800, // Maksimal lebar 500px
+              maxWidth: 500, // Maksimal lebar 500px
             ),
             child: BlocConsumer<MasjidCubit, MasjidState>(
               listener: (context, state) {

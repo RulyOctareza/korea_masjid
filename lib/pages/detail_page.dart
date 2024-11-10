@@ -39,7 +39,7 @@ class _DetailPageState extends State<DetailPage> {
             child: Center(
               child: ConstrainedBox(
                 constraints: BoxConstraints(
-                  maxWidth: 800,
+                  maxWidth: 500,
                 ),
                 child: Stack(
                   alignment: AlignmentDirectional.topCenter,

@@ -18,7 +18,7 @@ class CommunityMasjidPage extends StatelessWidget {
           child: Center(
             child: ConstrainedBox(
               constraints: BoxConstraints(
-                maxWidth: 800,
+                maxWidth: 500,
               ),
               child: Scaffold(
                 backgroundColor: themeMode == ThemeMode.dark
@@ -39,7 +39,7 @@ class CommunityMasjidPage extends StatelessWidget {
                   child: Center(
                     child: ConstrainedBox(
                       constraints: BoxConstraints(
-                        maxWidth: 800,
+                        maxWidth: 500,
                       ),
                       child: BlocBuilder<MasjidCubit, MasjidState>(
                         builder: (context, state) {

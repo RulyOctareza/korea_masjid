@@ -112,7 +112,7 @@ class _SearchPageState extends State<SearchPage> {
               return Center(
                 child: ConstrainedBox(
                   constraints: BoxConstraints(
-                    maxWidth: 800,
+                    maxWidth: 500,
                   ),
                   child: LayoutBuilder(
                     builder: (context, constraints) {
