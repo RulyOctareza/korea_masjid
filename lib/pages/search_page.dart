@@ -110,10 +110,9 @@ class _SearchPageState extends State<SearchPage> {
                 _filteredMasjids = state.masjids;
               }
               return Center(
-
                 child: ConstrainedBox(
                   constraints: BoxConstraints(
-                    maxWidth: 500,
+                    maxWidth: 800,
                   ),
                   child: LayoutBuilder(
                     builder: (context, constraints) {
@@ -144,7 +143,8 @@ class _SearchPageState extends State<SearchPage> {
                                       height: 300,
                                       // Ganti dengan gambar yang sesuai
                                       child: ClipRRect(
-                                        borderRadius: BorderRadius.circular(16.0),
+                                        borderRadius:
+                                            BorderRadius.circular(16.0),
                                         child: Image.asset(
                                           'assets/images/masjid.jpg', // Pastikan gambar ada di folder assets
                                           fit: BoxFit.cover,
@@ -158,7 +158,8 @@ class _SearchPageState extends State<SearchPage> {
                                 Expanded(
                                   flex: 1,
                                   child: Column(
-                                    crossAxisAlignment: CrossAxisAlignment.start,
+                                    crossAxisAlignment:
+                                        CrossAxisAlignment.start,
                                     children: [
                                       Text(
                                         'Selamat Datang di Korea Masjid',

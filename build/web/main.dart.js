@@ -78614,7 +78614,7 @@ L(a){return A.qO(null,null,new A.ZV(this),t.zh,t.jm)}}
 A.ZV.prototype={
 $2(a,b){var s=null,r=b===B.er,q=r?$.XL():B.j,p=this.a,o=r?$.aqa():$.atI()
 o=A.cq("Mosque in Area "+p.c,s,s,s,o,s,s)
-return A.Ag(s,s,A.mP(!0,A.f2(new A.dT(new A.ag(0,500,0,1/0),A.Ag(A.au_(r?$.XL():B.j,o),q,A.mP(!0,A.f2(new A.dT(new A.ag(0,500,0,1/0),A.qO(s,s,new A.ZU(p),t.DR,t.QJ),s),s,s),!0),s),s),s,s),!0),s)},
+return A.Ag(s,s,A.mP(!0,A.f2(new A.dT(new A.ag(0,800,0,1/0),A.Ag(A.au_(r?$.XL():B.j,o),q,A.mP(!0,A.f2(new A.dT(new A.ag(0,800,0,1/0),A.qO(s,s,new A.ZU(p),t.DR,t.QJ),s),s,s),!0),s),s),s,s),!0),s)},
 $S:189}
 A.ZU.prototype={
 $2(a,b){var s,r,q=null
@@ -78652,7 +78652,7 @@ return A.K($async$oZ,r)},
 L(a){return A.qO(null,null,new A.ai8(this),t.zh,t.jm)}}
 A.ai8.prototype={
 $2(a,b){var s=null,r=b===B.er?B.l:B.j,q=this.a,p=t.p
-return A.Ag(s,r,A.mP(!1,A.f2(new A.dT(new A.ag(0,500,0,1/0),A.u4(B.ks,A.b([A.o1(A.eh(15),A.rM(q.a.c.d,B.b9,300,"Name of Masjid",300)),A.f4(s,B.JQ,B.t,s,s,s,s,new A.ar(24,40,24,40),s),A.JZ(A.b([B.LY,A.qO(s,s,new A.ai7(q),t.zh,t.jm)],p),s,B.a8)],p),B.aa,B.df),s),s,s),!0),s)},
+return A.Ag(s,r,A.mP(!1,A.f2(new A.dT(new A.ag(0,800,0,1/0),A.u4(B.ks,A.b([A.o1(A.eh(15),A.rM(q.a.c.d,B.b9,300,"Name of Masjid",300)),A.f4(s,B.JQ,B.t,s,s,s,s,new A.ar(24,40,24,40),s),A.JZ(A.b([B.LY,A.qO(s,s,new A.ai7(q),t.zh,t.jm)],p),s,B.a8)],p),B.aa,B.df),s),s,s),!0),s)},
 $S:189}
 A.ai7.prototype={
 $2(a,b){var s,r,q,p,o,n,m=null,l=t.w,k=A.bC(a,m,l).w,j=b===B.er?B.l:B.j,i=this.a,h=i.a.c,g=A.Y(a).p2.y
@@ -78719,7 +78719,7 @@ s.toString
 A.kT(s,!1,t.DR).kg()
 this.aN()},
 L(a){var s=null
-return A.Ag(s,A.Y(a).go,A.mP(!1,A.f2(new A.dT(new A.ag(0,500,0,1/0),new A.qQ(new A.aja(new A.ajh(a),new A.ajf(a,new A.ajc(a))),new A.ajb(),s,t.wy),s),s,s),!0),B.kV)}}
+return A.Ag(s,A.Y(a).go,A.mP(!1,A.f2(new A.dT(new A.ag(0,800,0,1/0),new A.qQ(new A.aja(new A.ajh(a),new A.ajf(a,new A.ajc(a))),new A.ajb(),s,t.wy),s),s,s),!0),B.kV)}}
 A.ajc.prototype={
 $2(a,b){var s,r=null,q=this.a,p=A.eh(15)
 p=A.f4(r,r,B.t,r,new A.dc(B.AW,A.aqA(B.b9,new A.qL(b,r,r)),r,p,r,r,B.aA),110,B.lN,r,110)
@@ -78890,7 +78890,7 @@ A.amc.prototype={
 $2(a,b){var s,r=null
 if(b instanceof A.kF){s=this.a
 if(J.hk(s.e))s.e=b.a
-return A.f2(new A.dT(new A.ag(0,500,0,1/0),new A.JT(new A.amb(s,b),r),r),r,r)}return B.eH},
+return A.f2(new A.dT(new A.ag(0,800,0,1/0),new A.JT(new A.amb(s,b),r),r),r,r)}return B.eH},
 $S:519}
 A.amb.prototype={
 $2(a,b){var s,r,q,p,o=null
