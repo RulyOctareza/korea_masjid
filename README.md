@@ -1,16 +1,75 @@
-# korea_masjid
+<p align="center">
+  <img src="docs/preview/hero.png" alt="Korea Masjid — ilustrasi aplikasi pencari masjid" width="100%">
+</p>
 
-Aplikasi untuk menemukan Masjid Indonesia di Korea selatan.
+<h1 align="center">Korea Masjid</h1>
 
-## Getting Started
+<p align="center">
+  <b>Temukan masjid Indonesia di Korea Selatan.</b><br>
+  Peta · jarak terdekat · favorit · berbagi
+</p>
 
-This project is a starting point for a Flutter application.
+<p align="center">
+  <a href="https://flutter.dev"><img alt="Flutter" src="https://img.shields.io/badge/Flutter-3.x-02569B?logo=flutter&logoColor=white"></a>
+  <img alt="BLoC" src="https://img.shields.io/badge/State-BLoC%20(Cubit)-2496ED">
+  <a href="https://firebase.google.com"><img alt="Firebase" src="https://img.shields.io/badge/Backend-Firebase-FFCA28?logo=firebase&logoColor=black"></a>
+</p>
 
-A few resources to get you started if this is your first Flutter project:
+---
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+## ✨ Preview
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+<p align="center">
+  <img src="docs/preview/hero.png" alt="Mockup gelap Korea Masjid" width="90%">
+</p>
+
+> **Catatan:** gambar di atas adalah *ilustrasi konsep*, bukan screenshot asli.
+
+---
+
+## 📖 Tentang
+
+Aplikasi pencari masjid untuk muslim Indonesia di Korea Selatan. Data masjid diambil dari
+Cloud Firestore, lengkap dengan kartu jarak terdekat, galeri, dan tombol berbagi.
+
+---
+
+## 🌟 Fitur
+
+- 🕌 **Daftar & detail masjid** dengan galeri foto
+- 📏 **Kartu masjid terdekat** (`masjid_terdekat`, `masjid_distance_card`)
+- 🔎 **Pencarian**
+- ⭐ **Favorit**
+- 👥 **Komunitas masjid**
+- 📰 **Blog**
+- 📤 **Berbagi** via `share_plus`
+- 🌐 **Build web** (Firebase Hosting / Vercel)
+
+---
+
+## 🛠️ Tech Stack
+
+| Area | Pilihan |
+|---|---|
+| Framework | Flutter (Android, iOS, Web) |
+| State management | BLoC / Cubit |
+| Data | Cloud Firestore + Firebase Auth |
+| HTTP | `http` |
+| Analitik web | Vercel Analytics (`@vercel/analytics`) |
+
+---
+
+## 🚀 Menjalankan
+
+```bash
+flutter pub get
+flutter run
+```
+
+Untuk web:
+
+```bash
+flutter build web
+```
+
+Konfigurasi Firebase mengikuti `firebase_options.dart`.
