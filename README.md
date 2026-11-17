@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="docs/preview/hero.png" alt="Korea Masjid — ilustrasi aplikasi pencari masjid" width="100%">
+  <img src="docs/preview/hero.svg" alt="Korea Masjid — ilustrasi aplikasi pencari masjid" width="100%">
 </p>
 
 <h1 align="center">Korea Masjid</h1>
